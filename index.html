@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrix Calculator</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section id="banner">
+    <p>Projektni zadatak<hr></p>
+    <div class="upute">
+        <h2>Ovo je kalkulator zaračunanje matrica (zbrajanje, množenje, oduzimanje) i izračun transponirane matrice i determinantu matrice.</h2>
+        <h3>Upute za korištenje: Matrica A i B pri izračunu moraju biti istih dimenzija inače kalkulator izbacuje grešku, nakon svake funkcije potrebno je pritisnuti tipku "resetiranje</h3>
+    </div>
+    <div id="upper">
+        <div id="matrix1" class="parent">
+            <h1 class="title">Matrica A</h1>
+            <input type="number" class="m1r1" value="0"/>
+            <input type="number" class="m1r1" value="0"/>
+            <input type="number" class="m1r1" value="0"/>
+            <input type="number" class="m1r2" value="0"/>
+            <input type="number" class="m1r2" value="0"/>
+            <input type="number" class="m1r2" value="0"/>
+            <input type="number" class="m1r3" value="0"/>
+            <input type="number" class="m1r3" value="0"/>
+            <input type="number" class="m1r3" value="0"/>
+            <div class="functions">
+                <input type="button" class="function" value="Determinanta(A)" onclick="mc.calDeterminantA()"/>
+                <input type="button" class="function" value="Transponirana(A)" onclick="mc.transposeMatrixA()"/>
+                
+                
+            </div>
+        </div>
+        <div id="operations">
+            <input class="operation" type="button" value="Zbrajanje" onclick="mc.addMatrix()"/>
+            <input class="operation" type="button" value="Oduzimanje" onclick="mc.subtractMatrix()"/>
+            <input class="operation" type="button" value="Množenje" onclick="mc.multiplyMatrix()"/>
+            <input type="button" class="operation" value="Resetiraj" onclick="mc.clear()"/>
+        </div>
+        <div id="matrix2" class="parent">
+             <h1 class="title">Matrica B</h1>
+             <input type="number" class="m2r1" value="0"/>
+             <input type="number" class="m2r1" value="0"/>
+             <input type="number" class="m2r1" value="0"/>
+             <input type="number" class="m2r2" value="0"/>
+             <input type="number" class="m2r2" value="0"/>
+             <input type="number" class="m2r2" value="0"/>
+             <input type="number" class="m2r3" value="0"/>
+             <input type="number" class="m2r3" value="0"/>
+             <input type="number" class="m2r3" value="0"/>
+             <div class="functions">
+                <input type="button" class="function" value="Determinanta(B)" onclick="mc.calDeterminantB()"/>
+                <input type="button" class="function" value="Transponirana(B)" onclick="mc.transposeMatrixB()"/>
+                
+                
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="lower">
+        <textarea wrap="soft" id="console" cols="20" rows="10" disabled>Rezultat:</textarea>
+    </div>
+
+    <footer class="footer">
+        <h2>Lovro Gladić i Ivan Rengel, 3TR1</h2>
+    </footer>
+   
+</section>
+</body>
+</html>
